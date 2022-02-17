@@ -21,8 +21,12 @@
   "bugs": {
     "url": "https://github.com/Romy-Thu/Blok-Tech_klas-tech2/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/Romy-Thu/Blok-Tech_klas-tech2#readme",
   "dependencies": {
     "express": "^4.17.2"
   }
+=======
+  "homepage": "https://github.com/Romy-Thu/Blok-Tech_klas-tech2#readme"
+>>>>>>> 84ccb056c28f7ec9e603a039f7330089ea15addf
 }
