@@ -15,7 +15,10 @@
 const express = require('express')
 const app = express()
 
-express()
+app.use('/static', express.static('public'))
+app.set('view engine', 'hier mijn templating')
+app.set('views', 'view')
+
 app.get('/', onhome)
 app.get('/about', onabout)
 app.get('/login', onlogin)
@@ -34,6 +37,7 @@ function onlogin(req, res) {
   res.send('<h1>login</h1>')
 }
 
-app.get((req, res, next) => {
+app.use((req, res, next) => {
   res.status(404).send('jammerdan')
 })
+
