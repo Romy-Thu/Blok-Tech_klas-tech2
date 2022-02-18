@@ -15,7 +15,7 @@
 const express = require('express')
 const app = express()
 
-app.use('/static', express.static('public'))
+app.use('/static', express.static('static'))
 app.set('view engine', 'hier mijn templating')
 app.set('views', 'view')
 
