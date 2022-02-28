@@ -20,7 +20,7 @@ De gehele documentatie over hoe ik op mijn concept ben gekomen en hoe ik mijn fe
 ## Lincense
 Romy-Thu/blok-Tech_klas-tech2 is licensed under the GNU General Public License v3.0
 
-## Contact
-Naam - Romythu Zwijnenburg
-Email - romy-Thu.zwijnenburg@hva.nl
-Project - https://github.com/Romy-Thu/Blok-Tech_klas-tech2
+## Contact <br>
+Naam - Romythu Zwijnenburg <br>
+Email - romy-Thu.zwijnenburg@hva.nl <br>
+Project - https://github.com/Romy-Thu/Blok-Tech_klas-tech2 <br>
