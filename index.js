@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const PORT = 8000
 
+// ----------------------------------- render pages
+
 const exphbs = require("express-handlebars");
 app.engine(
   "hbs",
