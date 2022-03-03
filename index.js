@@ -1,43 +1,48 @@
-// console.log("Hallo mensen")
-
-// const express = require('express')
-// const app = express()
-// const port = 3000
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
-
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
-
 const express = require('express')
 const app = express()
+const PORT = 8000
+
+const exphbs = require("express-handlebars");
+app.engine(
+  "hbs",
+  exphbs.engine({
+    defaultLayout: "main",
+    extname: ".hbs",
+  })
+);
+
+app.set("view engine", "hbs");
+
+app.get("/", (req, res) => {
+  res.render("matches");
+});
+
+
+// ----------------------------------- routes maken
 
 app.use('/static', express.static('static'))
-app.set('view engine', 'hier mijn templating')
-app.set('views', 'view')
 
 app.get('/', onhome)
 app.get('/about', onabout)
 app.get('/login', onlogin)
-
-.listen(8000)
+app.get('*', notfound)
 
 function onhome(req, res) {
-  res.send('<h1>Home Page</h1>')
+  res.send('<h1>Dit is de homepagina!</h1>')
 }
 
 function onabout(req, res) {
-  res.send('<h1>about me</h1>')
+  res.send('<h1>Hier vind je alles about me!</h1>')
 }
 
 function onlogin(req, res) {
-  res.send('<h1>login</h1>')
+  res.send('<h1>Op deze pagina kun je inloggen</h1>')
 }
 
-app.use((req, res, next) => {
-  res.status(404).send('jammerdan')
-})
+function notfound(req, res) {
+  res.send('<h1>404 - Not Found!</h1>')
+}
 
+app.listen(PORT, function () {
+  console.log('listening to port: ', PORT)
+})

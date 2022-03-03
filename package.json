@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Romy-Thu/Blok-Tech_klas-tech2#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "handlebars": "^4.7.7"
   }
 }
