@@ -1,6 +1,23 @@
 const express = require('express')
 const app = express()
-const PORT = 8000
+const PORT = 3001
+const {test}  = require('./utils/db')
+
+
+require('dotenv').config();
+
+// ----------------------------------- Mongodb
+const { MongoClient } = require('mongodb');
+
+// 
+const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@blok-tech.xaela.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+
+console.log(uri)
+
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+console.log(test)
+test(client)
 
 // ----------------------------------- render pages
 
@@ -34,7 +51,7 @@ function onhome(req, res) {
 }
 
 function onabout(req, res) {
-  res.send('<h1>Hier vind je alles about me!</h1>')
+  res.send('<h1>About!</h1>')
 }
 
 function onlogin(req, res) {
