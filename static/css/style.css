@@ -1,0 +1,165 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+/* Algemeen */
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+body {
+    background-color: red;
+}
+
+main {
+    max-width: 50em;
+    margin: auto;
+}
+
+
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+/* Header */
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+header {
+    max-width: 60em;
+    margin: auto;
+}
+
+header h1 {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    text-align: center;
+    margin: 1em 0em 0em;
+}
+
+header nav {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    margin: 1em;
+    /* justify-content: center; */
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-grow: 1; */
+}
+
+header nav li:first-of-type a {
+    text-decoration: none;
+}
+
+header nav li {
+    list-style-type: none;
+    /* flex-grow: 1; */
+}
+
+header nav li a {
+    display: block;
+    text-align: center;
+}
+
+header nav img {
+    width: 5em;
+}
+
+header hr {
+    border-top: 0.2em solid #9ACD32;
+    border-radius: 1em;
+    width: 100%;
+    margin: auto;
+}
+
+
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+/* Matches */
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+#matches section:first-of-type {
+    margin: 2em;
+}
+
+#matches section:first-of-type form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#matches section:first-of-type fieldset {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#matches section:first-of-type button {
+    background-color: #9ACD32;
+    border: none;
+    color: black;
+    padding: 1em 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 1em 100%;
+}
+
+#matches section:first-of-type input {
+    margin: 0.2em 0.5em 0em 0em;
+}
+
+#matches section:first-of-type label {
+    padding: 0em 2em 0em 0em;
+}
+
+#matches section:first-of-type label:last-child {
+    padding: 0em;
+}
+
+#matches section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    justify-content: flex-start;
+}
+
+#matches section:nth-of-type(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#matches section:nth-of-type(3) a {
+    text-decoration: none;
+    background-color: #f8ffeb;
+    width: 15em;
+    height: 16.5em;
+    border-radius: 1em;
+    border: solid 0.1em black;
+    position: relative;
+    margin: 1em 0em;
+}
+
+#matches section:nth-of-type(3) a img {
+    max-width: 14.9em;
+    border-radius: 1em;
+}
+
+#matches section:nth-of-type(3) a div {
+    color: black;
+    position: absolute;
+    bottom: 1em;
+    padding-left: 1em;
+}
+
+#matches section:nth-of-type(3) a div h3 {
+    padding: 0.5em 0em;
+}
