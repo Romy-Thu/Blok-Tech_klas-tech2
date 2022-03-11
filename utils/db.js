@@ -6,19 +6,20 @@ exports.test = async function (client){
   
       const collection = database.collection('users')
   
-      return collection.find().toArray()
-      // const doc = {
-      //       naam: "Michael B Jordan",
-      //       imgSrc: "static/images/persoon2.png",
-      //       Leeftijd: "30",
-      //       locatie: "Amsterdam",
-      //       Intresse: "Music",
-      //   }
-  
+    //   const doc = {
+    //     naam: "Lore Harvet",
+    //     imgSrc: "static/images/persoon4.png",
+    //     Leeftijd: "24",
+    //     locatie: "Rotterdam",
+    //     Intresse: "Food",
+    // }
+
       // // hier gaat een document in - fuctie insertOne (promises)
       // await collection.insertOne(doc).then(event => {
       //   console.log('event', event)
       // })
+
+      return collection.find().toArray()
   
     // Error, als de database niet doet
     } catch (err) { 

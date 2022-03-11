@@ -1,30 +1,45 @@
 <main id="matches">
+{{!-- Section 1 --}}
+<form action="/formulier" method="post" id="filters">
+  <h1 class="bigHead">Filter</h1>
+  <h2 class="bump"><span class="results">aantal</span> Results Found</h2>
 
-    {{!-- Section 1 --}}
-    <section>
+  <div id="type">
+    <h1>Intresse</h1>
+    <div class="bump">
+      <div class="box1">
+        <input type="checkbox" id="clothing" name="Intresse" value="Sport">
+        <label for="clothing" class="check-box"></label>
+        <h4>Sports</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="equipment" name="Intresse" value="Music">
+        <label for="equipment" class="check-box"></label>
+        <h4>Music</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="trips" name="Intresse" value="Food">
+        <label for="trips" class="check-box"></label>
+        <h4>Food</h4>
+      </div>
+      <div class="box1">
+        <input type="checkbox" id="social" name="Intresse" value="Sport">
+        <label for="social" class="check-box"></label>
+        <h4>Drinks</h4>
+      </div>
+    </div>
+  </div>
 
-        {{!-- Wanneer er op verzonden wordt gedrukt verstuurt browser naar de server,
-        browser wordt naar /formulier geleid --}}
-        <form action="/formulier" method="POST">
-            <fieldset>
-                {{!-- Radiobuttons met diersoorten --}}
-                <input type="radio" id="Sport" name="Intresse" value="Sport" />
-                <label for="Sport">Drinks</label>
-                <input type="radio" id="Music" name="Intresse" value="Music" />
-                <label for="Music">Food</label>
-                <input type="radio" id="Food" name="Intresse" value="Food" />
-                <label for="Food">Music</label>
-                <input type="radio" id="" name="Intresse" value="sport" />
-                <label for="Sport">Sports</label>
-            </fieldset>
-            <button type="submit">Opslaan</button>
-        </form>
-    </section>
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
 
-    {{!-- Section 2 --}}
-    <section>
-        <h2>Mijn matches</h2>
-    </section>
+  <button type="submit">Opslaan</button>
+
+  <!--END PRICE RANGE-->
+</form>
+
 
     {{!-- Section 3 --}}
     <section>
@@ -32,7 +47,7 @@
         {{!-- Loop met hbs om alle dieren te weergeven --}}
         {{#each gebruikers}}
         <a href="#">
-            <img src={{this.imgSrc}} alt="Foto van persoon" />
+            <img class"gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />
             <div>
                 <h3>{{this.naam}}</h3>
                 <h4>{{this.budget}}</h4>

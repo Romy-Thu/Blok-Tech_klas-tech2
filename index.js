@@ -15,9 +15,9 @@ const { MongoClient } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@blok-tech.xaela.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-console.log(uri)
+// console.log(uri)
 
-console.log(test)
+// console.log(test)
 test(client)
 
 // ----------------------------------- render pages
@@ -32,15 +32,17 @@ app.engine(
 
 app.set("view engine", "hbs");
 
-app.get("/", (req, res) => {
-  res.render("matches");
-});
+// app.get("/", (req, res) => {
+//   res.render("matches");
+// });
 
 
 
 // alle dieren die in array staan in console weergeven
 test(client).then(data => { console.log(data)})
 
+// om images en css te serven in directory "static"
+app.use('/static', express.static('static'));
 
 //-------------------------------------------------------------------------------------- naar database
 
@@ -55,12 +57,14 @@ app.use(express.urlencoded({
 // duurt wat langer nog even wachten...
 app.get("/", async(req, res) => {
 
-  // data uit de database wat in een array is gestopt wordt nu in de constante dieren gezet.
+  // data uit de database wat in een array is gestopt wordt nu in de constante gebruikers gezet.
   const gebruikers = await test(client); 
+
+  console.log(gebruikers)
+
 
   // ophalen gebruikers database
   res.render("matches", {
-    
     gebruikers: gebruikers
   });
 });
@@ -69,16 +73,21 @@ app.get("/", async(req, res) => {
 app.post("/formulier", async(req, res) => {
 
   const gebruikers = await test(client); 
+  const inputIntresse = req.body.Intresse;
+  
+  console.log(inputIntresse);
+  let tempArray = [];
 
-  console.log(req.body);
-  // filter gebruikers
-  const filterGebruikers = gebruikers.filter((gebruikers) => {
-    // stop het item alleen in de array wanneer onderstaande regel 'true' is
-    return gebruikers.Intresse == req.body.Intresse;
+  gebruikers.forEach(object => {
+    if(object.Intresse == inputIntresse) {
+      tempArray.push(object);
+    }
   });
-  //render same page with filtered animals
+
+  
+  //render same page with filter gebruikers
   res.render("matches", {
-    gebruikers: filterGebruikers
+    gebruikers: tempArray
   });
 });
 

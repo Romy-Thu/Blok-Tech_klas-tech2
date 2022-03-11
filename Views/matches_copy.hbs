@@ -1,0 +1,45 @@
+<main id="matches">
+
+    {{!-- Section 1 --}}
+    <section>
+
+        {{!-- Wanneer er op verzonden wordt gedrukt verstuurt browser naar de server,
+        browser wordt naar /formulier geleid --}}
+        <form action="/formulier" method="POST">
+            <fieldset>
+                {{!-- Radiobuttons met diersoorten --}}
+                <input type="radio" id="Sport" name="Intresse" value="Sport" />
+                <label for="Sport">Drinks</label>
+                <input type="radio" id="Music" name="Intresse" value="Music" />
+                <label for="Music">Food</label>
+                <input type="radio" id="Food" name="Intresse" value="Food" />
+                <label for="Food">Music</label>
+                <input type="radio" id="" name="Intresse" value="sport" />
+                <label for="Sport">Sports</label>
+            </fieldset>
+            <button type="submit">Opslaan</button>
+        </form>
+    </section>
+
+    {{!-- Section 2 --}}
+    <section>
+        <h2>Mijn matches</h2>
+    </section>
+
+    {{!-- Section 3 --}}
+    <section>
+
+        {{!-- Loop met hbs om alle dieren te weergeven --}}
+        {{#each gebruikers}}
+        <a href="#">
+            <img src={{this.imgSrc}} alt="Foto van persoon" />
+            <div>
+                <h3>{{this.naam}}</h3>
+                <h4>{{this.budget}}</h4>
+                <p>{{this.locatie}}</p>
+            </div>
+        </a>
+        {{/each}}
+    </section>
+
+</main>
