@@ -4,7 +4,7 @@
   "description": "finding foodie friends, with filtering",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemond index.js"
   },
   "repository": {
     "type": "git",
