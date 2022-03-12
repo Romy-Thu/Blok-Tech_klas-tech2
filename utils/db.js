@@ -9,15 +9,15 @@ exports.test = async function (client){
     //   const doc = {
     //     naam: "Lore Harvet",
     //     imgSrc: "static/images/persoon4.png",
-    //     Leeftijd: "24",
+    //     Leeftijd: "25",
     //     locatie: "Rotterdam",
     //     Intresse: "Food",
     // }
 
-      // // hier gaat een document in - fuctie insertOne (promises)
-      // await collection.insertOne(doc).then(event => {
-      //   console.log('event', event)
-      // })
+    //   // hier gaat een document in - fuctie insertOne (promises)
+    //   await collection.insertOne(doc).then(event => {
+    //     console.log('event', event)
+    //   })
 
       return collection.find().toArray()
   

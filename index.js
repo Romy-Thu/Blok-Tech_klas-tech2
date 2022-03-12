@@ -3,7 +3,7 @@ const app = express()
 const exphbs = require("express-handlebars");
 const bodyParser = require('body-parser')
 const multer = require('multer')
-const PORT = 3001
+const PORT = process.env.PORT || 3000
 
 const {test}  = require('./utils/db')
 
@@ -74,17 +74,21 @@ app.post("/formulier", async(req, res) => {
 
   const gebruikers = await test(client); 
   const inputIntresse = req.body.Intresse;
+  const inputLeeftijd = req.body.Leeftijd;
   
-  console.log(inputIntresse);
+  // console.log(inputIntresse);
+  console.log(inputLeeftijd);
   let tempArray = [];
 
   gebruikers.forEach(object => {
-    if(object.Intresse == inputIntresse) {
-      tempArray.push(object);
+    if(object.Intresse == inputIntresse && object.Leeftijd == inputLeeftijd) {
+    tempArray.push(object);
     }
+
   });
 
-  
+
+
   //render same page with filter gebruikers
   res.render("matches", {
     gebruikers: tempArray

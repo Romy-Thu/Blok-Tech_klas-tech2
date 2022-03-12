@@ -38,18 +38,12 @@ header {
 }
 
 header h1 {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     text-align: center;
     margin: 1em 0em 0em;
 }
 
 header nav {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
     margin: 1em;
-    /* justify-content: center; */
 }
 
 header nav ul {
@@ -58,7 +52,6 @@ header nav ul {
     margin: 1em;
     justify-content: space-between;
     align-items: center;
-    /* flex-grow: 1; */
 }
 
 header nav li:first-of-type a {
@@ -67,7 +60,6 @@ header nav li:first-of-type a {
 
 header nav li {
     list-style-type: none;
-    /* flex-grow: 1; */
 }
 
 header nav li a {
@@ -92,15 +84,11 @@ header hr {
 /* Matches */
 /* ********************************************************************************************* */
 /* ********************************************************************************************* */
-#matches a{
+/* #matches a{
     margin: 1em;
 }
 
-#matches section:first-of-type {
-    margin: 2em;
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 #matches section:first-of-type form {
     display: flex;
@@ -113,16 +101,6 @@ header hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-#matches section:first-of-type button {
-    background-color: #9ACD32;
-    border: none;
-    color: black;
-    padding: 1em 1.5em;
-    font-size: 1em;
-    cursor: pointer;
-    margin: 1em 100%;
 }
 
 #matches section:first-of-type input {
@@ -175,13 +153,20 @@ header hr {
 
 #matches section:nth-of-type(3) a div h3 {
     padding: 0.5em 0em;
-}
+} */
 
+#matches a{
+    margin: 1em;
+}
 img {
     max-width: 250px;
 }
 
-
+#matches section:first-of-type {
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /*filter*/
 aside,
@@ -547,15 +532,6 @@ input[type=checkbox]:checked + .check-box::before,
 
 
 /* slider */
-p,
-label {
-    font: 1rem 'Fira Sans', sans-serif;
-}
-
-input {
-    margin: .4rem;
-}
-
 .slidecontainer {
     width: 100%;
   }
@@ -563,7 +539,8 @@ input {
   .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 25px;
+    height: 15px;
+    border-radius: 5px;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -580,6 +557,7 @@ input {
     appearance: none;
     width: 25px;
     height: 25px;
+    border-radius: 50%;
     background: #04AA6D;
     cursor: pointer;
   }
@@ -587,6 +565,7 @@ input {
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
+    border-radius: 50%;
     background: #04AA6D;
     cursor: pointer;
   }
