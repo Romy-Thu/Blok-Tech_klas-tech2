@@ -1,8 +1,8 @@
 <main id="matches">
 {{!-- Section 1 --}}
+
 <form action="/formulier" method="post" id="filters">
-  <h1 class="bigHead">Filter</h1>
-  <h2 class="bump"><span class="results">aantal</span> Results Found</h2>
+  <h1>Filter</h1>
 
   <div id="type">
     <h1>Intresse</h1>
@@ -47,11 +47,14 @@
         {{!-- Loop met hbs om alle dieren te weergeven --}}
         {{#each gebruikers}}
         <a href="#">
-            <img class"gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />
+            <img class="gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />
             <div>
                 <h3>{{this.naam}}</h3>
-                <h4>{{this.budget}}</h4>
                 <p>{{this.locatie}}</p>
+                <form action="/delete" method="post">
+                    <input name="match" type="hidden" value="{{this.naam}}" />
+                    <button type="submit">Delete</button>
+                </form>
             </div>
         </a>
         {{/each}}

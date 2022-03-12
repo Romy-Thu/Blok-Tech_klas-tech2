@@ -3,10 +3,9 @@ const app = express()
 const exphbs = require("express-handlebars");
 const bodyParser = require('body-parser')
 const multer = require('multer')
-const PORT = process.env.PORT || 3000
+const PORT = 3001
 
 const {test}  = require('./utils/db')
-
 
 require('dotenv').config();
 
@@ -15,9 +14,6 @@ const { MongoClient } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@blok-tech.xaela.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// console.log(uri)
-
-// console.log(test)
 test(client)
 
 // ----------------------------------- render pages
@@ -31,12 +27,6 @@ app.engine(
 
 app.set("view engine", "hbs");
 app.set('views', './Views');
-// app.get("/", (req, res) => {
-//   res.render("matches");
-// });
-
-
-
 
 // alle dieren die in array staan in console weergeven
 test(client).then(data => { console.log(data)})
@@ -69,6 +59,7 @@ app.get("/", async(req, res) => {
   });
 });
 
+  // ophalen gebruikers database
 
 app.post("/formulier", async(req, res) => {
 
@@ -87,7 +78,18 @@ app.post("/formulier", async(req, res) => {
 
   });
 
+  // post- delete uit de data base
+  app.post("/delete", async(req, res) => {
 
+    await client.connect()
+  
+    console.log(req.body)
+    client.db('usersdb').collection('users').deleteOne({ Leeftijd: req.body.match }).then(perfect => {
+      console.log(req.body.match)
+    })
+  
+    res.redirect('/')
+  });
 
   //render same page with filter gebruikers
   res.render("matches", {
