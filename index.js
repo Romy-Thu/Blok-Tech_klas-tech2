@@ -3,9 +3,10 @@ const app = express()
 const exphbs = require("express-handlebars");
 const bodyParser = require('body-parser')
 const multer = require('multer')
-const PORT = 3001
+const PORT = process.env.PORT || 3000
 
 const {test}  = require('./utils/db')
+
 
 require('dotenv').config();
 
@@ -59,7 +60,6 @@ app.get("/", async(req, res) => {
   });
 });
 
-  // ophalen gebruikers database
 
 app.post("/formulier", async(req, res) => {
 
@@ -76,19 +76,6 @@ app.post("/formulier", async(req, res) => {
     tempArray.push(object);
     }
 
-  });
-
-  // post- delete uit de data base
-  app.post("/delete", async(req, res) => {
-
-    await client.connect()
-  
-    console.log(req.body)
-    client.db('usersdb').collection('users').deleteOne({ Leeftijd: req.body.match }).then(perfect => {
-      console.log(req.body.match)
-    })
-  
-    res.redirect('/')
   });
 
   //render same page with filter gebruikers
