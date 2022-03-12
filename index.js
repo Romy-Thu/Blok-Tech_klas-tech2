@@ -21,10 +21,6 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 test(client)
 
 // ----------------------------------- render pages
-app.set('views', './views');
-
-
-
 app.engine(
   "hbs",
   exphbs.engine({
@@ -34,7 +30,7 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
-
+app.set('views', './views');
 // app.get("/", (req, res) => {
 //   res.render("matches");
 // });
