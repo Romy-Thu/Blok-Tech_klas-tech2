@@ -30,7 +30,7 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
-app.set("Views", "./Views");
+app.set('views', './Views');
 // app.get("/", (req, res) => {
 //   res.render("matches");
 // });
