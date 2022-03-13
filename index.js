@@ -78,6 +78,24 @@ app.post("/formulier", async(req, res) => {
 
   });
 
+
+  // delete uit de database
+
+  app.post("/delete", async (req, res) => {
+
+    await client.connect()
+  
+    console.log(req.body)
+    console.log(req.body.match)
+  
+    client.db('userdb').collection('users').deleteOne({ naam: req.body.match }).then(LoreHarvet => {
+      console.log(LoreHarvet);
+    })
+  
+    res.redirect('/')
+  
+  });  
+
   //render same page with filter gebruikers
   res.render("matches", {
     gebruikers: tempArray
