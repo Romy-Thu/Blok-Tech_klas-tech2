@@ -88,10 +88,7 @@ app.post("/formulier", async (req, res) => {
     console.log(req.body.match);
 
     client
-      .db("userdb")
-      .collection("users")
-      .deleteOne({ naam: req.body.match })
-      .then((LoreHarvet) => {
+      .db("userdb").collection("users").deleteOne({ naam: req.body.match }).then((LoreHarvet) => {
         console.log(LoreHarvet);
       });
 
