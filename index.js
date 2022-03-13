@@ -83,7 +83,7 @@ app.post("/formulier", async(req, res) => {
 
   app.post("/delete", async (req, res) => {
 
-    await client.connect()
+    await client.connect(client)
   
     console.log(req.body)
     console.log(req.body.match)
@@ -120,7 +120,7 @@ function notfound(req, res) {
   res.send('<h1>404 - Not Found!</h1>')
 }
 
-// Geeft aan dat de app draait op de poort 8000
+// Geeft aan dat de app draait op de poort 3000
 app.listen(PORT, function () {
   console.log('listening to port: ', PORT)
 })
