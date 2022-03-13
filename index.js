@@ -91,7 +91,7 @@ app.post("/formulier", async (req, res) => {
       });
 
     res.redirect("/");
-  });ç
+  });
 
   //render same page with filter gebruikers
   res.render("matches", {
