@@ -1,62 +1,69 @@
 <main id="matches">
-{{!-- Section 1 --}}
+  {{! Section 1 }}
 
-<form action="/formulier" method="post" id="filters">
-  <h1>Filter</h1>
+  <form action="/formulier" method="post" id="filters">
+    <h1>Filter</h1>
 
-  <div id="type">
-    <h1>Intresse</h1>
-    <div class="bump">
-      <div class="box1">
-        <input type="checkbox" id="clothing" name="Intresse" value="Sport">
-        <label for="clothing" class="check-box"></label>
-        <h4>Sports</h4>
-      </div>
-      <div class="box1">
-        <input type="checkbox" id="equipment" name="Intresse" value="Music">
-        <label for="equipment" class="check-box"></label>
-        <h4>Music</h4>
-      </div>
-      <div class="box1">
-        <input type="checkbox" id="trips" name="Intresse" value="Food">
-        <label for="trips" class="check-box"></label>
-        <h4>Food</h4>
-      </div>
-      <div class="box1">
-        <input type="checkbox" id="social" name="Intresse" value="Sport">
-        <label for="social" class="check-box"></label>
-        <h4>Drinks</h4>
+    <div id="type">
+      <h1>Intresse</h1>
+      <div class="bump">
+        <div class="box1">
+          <input type="checkbox" id="clothing" name="Intresse" value="Sport" />
+          <label for="clothing" class="check-box"></label>
+          <h4>Sports</h4>
+        </div>
+        <div class="box1">
+          <input type="checkbox" id="equipment" name="Intresse" value="Music" />
+          <label for="equipment" class="check-box"></label>
+          <h4>Music</h4>
+        </div>
+        <div class="box1">
+          <input type="checkbox" id="trips" name="Intresse" value="Food" />
+          <label for="trips" class="check-box"></label>
+          <h4>Food</h4>
+        </div>
+        <div class="box1">
+          <input type="checkbox" id="social" name="Intresse" value="Sport" />
+          <label for="social" class="check-box"></label>
+          <h4>Drinks</h4>
+        </div>
       </div>
     </div>
-  </div>
 
-<div class="slidecontainer">
-  <input type="range" min="1" max="60" class="slider" id="myRange" name="Leeftijd" value="30">
-  <p>Leeftijd <span id="demo"></span></p>
-</div>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="60"
+        class="slider"
+        id="myRange"
+        name="Leeftijd"
+        value="30"
+      />
+      <p>Leeftijd <span id="demo"></span></p>
+    </div>
 
-  <button type="submit">Opslaan</button>
+    <button type="submit">Opslaan</button>
 
-  <!--END PRICE RANGE-->
-</form>
+    <!--END PRICE RANGE-->
+  </form>
 
+  {{! Section 3 }}
+  <section>
 
-    {{!-- Section 3 --}}
-    <section>
-
-        {{!-- Loop met hbs om alle dieren te weergeven --}}
-        {{#each gebruikers}}
-        <a href="#">
-            <img class="gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />
-            <div>
-                <h3>{{this.naam}}</h3>
-                <p>{{this.locatie}}</p>
-                <form action="/delete" method="post">
-                    <input name="match" type="hidden" value="{{this.naam}}" />
-                    <button type="submit">Delete</button>
-                </form>
-            </div>
-        </a>
-        {{/each}}
-    </section>
-    </main>ç
+    {{! Loop met hbs om alle dieren te weergeven }}
+    {{#each gebruikers}}
+      <a href="#">
+        <img class="gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />
+        <div>
+          <h3>{{this.naam}}</h3>
+          <p>{{this.locatie}}</p>
+          <form action="/delete" method="post">
+            <input name="match" type="hidden" value="{{this.naam}}" />
+            <button type="submit">Delete</button>
+          </form>
+        </div>
+      </a>
+    {{/each}}
+  </section>
+</main>ç
