@@ -83,7 +83,7 @@ app.post("/formulier", async(req, res) => {
 
   app.post("/delete", async (req, res) => {
 
-    await client.connect(client)
+    await client.connect(cliet)
   
     console.log(req.body)
     console.log(req.body.match)
