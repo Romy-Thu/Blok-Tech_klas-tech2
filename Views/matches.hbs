@@ -36,14 +36,13 @@
     </div>
 
     <button class="opslaan" type="submit">Opslaan</button>
-
-    <!--END PRICE RANGE-->
+    <!--END AGE RANGE-->
   </form>
 
   {{! Section 3 }}
   <section>
 
-    {{! Loop met hbs om alle dieren te weergeven }}
+    {{! Loop met hbs om alle matches te weergeven }}
     {{#each gebruikers}}
       <a href="#">
         <img class="gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />

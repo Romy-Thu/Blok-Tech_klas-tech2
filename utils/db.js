@@ -1,11 +1,10 @@
-exports.test = async function (client){
-    try { 
-      await client.connect()
-  
-      const database = client.db('userdb')
-  
-      const collection = database.collection('users')
-  
+exports.test = async function (client) {
+  try {
+    await client.connect();
+
+    const database = client.db("userdb");
+    const collection = database.collection("users");
+
     //   const doc = {
     //     naam: "Ryshandro",
     //     imgSrc: "static/images/persoon2.png",
@@ -19,13 +18,13 @@ exports.test = async function (client){
     //     console.log('event', event)
     //   })
 
-      return collection.find().toArray()
-  
-    // Error, als de database niet doet
-    } catch (err) { 
-        console.log(err)
-    }
-  
-  }
+    // Stopt de data uit mijn database in een Array
+    return collection.find().toArray();
 
-// test naam was niet nodig, 
+    // Error, als de database niet doet
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// test naam was niet nodig,

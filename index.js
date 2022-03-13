@@ -29,9 +29,10 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
+// om de views map te weergeven, anders staat er niks op de pagina.
 app.set("views", "./Views");
 
-// alle dieren die in array staan in console weergeven
+// alle matches die in array staan in console weergeven
 test(client).then((data) => {
   console.log(data);
 });
@@ -79,14 +80,18 @@ app.post("/formulier", async (req, res) => {
   });
 
   // delete uit de database
-  // werkt nog niet 
+  // werkt nog niet
   app.post("/delete", async (req, res) => {
     await client.connect(client);
 
     console.log(req.body);
     console.log(req.body.match);
 
-    client.db("userdb").collection("users").deleteOne({ naam: req.body.match }).then((LoreHarvet) => {
+    client
+      .db("userdb")
+      .collection("users")
+      .deleteOne({ naam: req.body.match })
+      .then((LoreHarvet) => {
         console.log(LoreHarvet);
       });
 
