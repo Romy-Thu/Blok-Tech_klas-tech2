@@ -11,11 +11,6 @@ html {
 /* ********************************************************************************************* */
 /* ********************************************************************************************* */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&family=Ubuntu+Mono&display=swap');body {
-    padding: 40px 0 0 0;
-    font-family: 'Roboto', sans-serif;
-    background: #efefef;
-    color: rgb(177, 177, 177);
-    padding: 20px 20px;
   }
 
 main {
@@ -29,6 +24,31 @@ main {
   width:300px;
   height:300px;
   object-fit:cover;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2{
+  font-size: 0.9em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-top: 0.5em;
+  text-decoration: none;
+  color: #F53D54;
+  font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+  color: #b1b1b1;
+  font-size: 1.1em;
+  padding-left: 0.5em;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* ********************************************************************************************* */
@@ -77,6 +97,7 @@ header nav img {
     width: 5em;
 }
 
+/* Line onder header */
 header hr {
     border-top: 0.2em solid #F53D54;
     border-radius: 1em;
@@ -84,9 +105,11 @@ header hr {
     margin: auto;
 }
 
+/* User/inloggen button recht boven pagina */
 .user{
   width: 45px;
 }
+
 /* ********************************************************************************************* */
 /* ********************************************************************************************* */
 /* Matches */
@@ -97,9 +120,6 @@ header hr {
     padding: 1em;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-img {
-    max-width: 250px;
-}
 
 #matches section:first-of-type {
     margin: 2em;
@@ -107,16 +127,15 @@ img {
     flex-wrap: wrap;
 }
 
-/*filter*/
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+/* Filter */
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
 aside,
 section {
   border-right: 1px solid rgba(51, 51, 51, 0.3);
   padding-right: 30px;
-}
-
-h1 {
-  font-weight: 600;
-  margin-bottom: 15px;
 }
 
 .filter {
@@ -126,60 +145,12 @@ h1 {
   color: #F53D54;
 }
 
-h3 {
-  font-size: 1.3em;
-  margin-top: 0.5em;
-  text-decoration: none;
-  color: #F53D54;
-}
-
-h4 {
-  color: #b1b1b1;
-  font-size: 1.1em;
-  padding-left: 0.5em;
-}
-
-.results {
-  color: #F53D54;
-  font-weight: 600;
-  font-size: 1.8em;
-}
-
-/*CHECK BOXES*/
-/* Checkmark style starts */
-
 .box1 {
   min-width: 120px;
   margin: 10px 0;
   clear: none;
   color: #b1b1b1;
   display: flex;
-}
-
-input[type=checkbox] {
-  display: none;
-  height: 200px;
-  width: 200px;
-}
-
-.check-box {
-  height: 30px;
-  width: 30px;
-  background-color: transparent;
-  border: 2px solid #838383;
-  border-radius: 5px;
-  position: relative;
-  display: inline-block;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-#filters input[type=checkbox]:checked + .check-box,
-.check-box.checked {
-  border-color: #F53D54;
-  background-color: #F53D54;
 }
 
 /* slider */
@@ -208,32 +179,25 @@ button {
   height: 40px;
   outline: none;
   padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 /* ********************************************************************************************* */
 /* ********************************************************************************************* */
-/* matches.hbs */
+/* Error */
 /* ********************************************************************************************* */
 /* ********************************************************************************************* */
-
-/* Section 1 *********************************************************************************** */
-#matches section:first-of-type {
-  margin: 2em;
-}
 
 .errorh2{
   color: #F53D54;
   text-decoration: none;
   font-size: 1em;
 }
+
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+/* Scroll */
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
 
 .scrolling-wrapper {
   overflow-x: scroll;
