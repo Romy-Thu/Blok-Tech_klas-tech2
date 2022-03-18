@@ -139,16 +139,6 @@ section {
   margin-top: 7px;
 }
 
-#specials,
-#priceRange,
-#sports,
-#type,
-{
-  margin: 10px 0;
-  position: relative;
-  clear: both;
-}
-
 .value {
   display: none !important;
 }
@@ -170,13 +160,7 @@ h1 {
   font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 15px;
-
   color: #F53D54;
-}
-
-h2 {
-  margin: 0;
-   font-size: 1.3em;
 }
 
 h3 {
@@ -269,10 +253,6 @@ h4 {
   clear: none;
 }
 
-.bump {
-  margin-left: 25px;
-  position: relative
-}
 
 .specBump {
   margin-left: 5px;
@@ -370,6 +350,8 @@ h4 {
 
 input[type=checkbox] {
   display: none;
+  height: 200px;
+  width: 200px;
 }
 
 .check-box {
@@ -392,10 +374,11 @@ input[type=checkbox] {
 
 .check-box::before,
 .check-box::after {
+  z-index: 1;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  position: absolute;
+  position: ;
   height: 0;
   width: 5px;
   background-color: #F53D54;
@@ -406,7 +389,6 @@ input[type=checkbox] {
   -webkit-transform-origin: left top;
   transform-origin: left top;
   border-radius: 2px;
-  content: ' ';
   -webkit-transition: opacity ease .5;
   -moz-transition: opacity ease .5;
   transition: opacity ease .5;
@@ -433,12 +415,13 @@ input[type=checkbox] {
   transform: rotate(-45deg);
 }
 
-input[type=checkbox]:checked + .check-box,
+#filters input[type=checkbox]:checked + .check-box,
 .check-box.checked {
   border-color: #F53D54;
+  background-color: #F53D54;
 }
 
-input[type=checkbox]:checked + .check-box::after,
+#filters input[type=checkbox]:checked + .check-box::after,
 .check-box.checked::after {
   height: 10px;
   -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
@@ -447,7 +430,7 @@ input[type=checkbox]:checked + .check-box::after,
   animation: dothabottomcheck 0.2s ease 0s forwards;
 }
 
-input[type=checkbox]:checked + .check-box::before,
+#filters input[type=checkbox]:checked + .check-box::before,
 .check-box.checked::before {
   height: 60px;
   -moz-animation: dothatopcheck 0.4s ease 0s forwards;
@@ -466,8 +449,6 @@ input[type=checkbox]:checked + .check-box::before,
   z-index: 1;
   width:100%;
 }
-
-
 
 /* slider */
 #myRange{
@@ -503,4 +484,37 @@ button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+/* matches.hbs */
+/* ********************************************************************************************* */
+/* ********************************************************************************************* */
+
+/* Section 1 *********************************************************************************** */
+#matches section:first-of-type {
+  margin: 2em;
+}
+
+.errorh2{
+  color: #F53D54;
+  text-decoration: underline;
+  font-size: 1em;
+}
+
+/* #matches section:first-of-type form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.cards{
+  display: inline-block;
 }

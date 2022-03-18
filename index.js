@@ -50,7 +50,7 @@ app.use(
   })
 );
 
-// async geeft aan dat dit een funcite is waarin dingen langer duren, zoals data uit een database halen
+// async geeft aan dat dit een functie is waarin dingen langer duren, zoals data uit een database halen
 // res.render() wordt gebruikt om een view te renderen en verstuurd de gerenderde HTML naar de client.
 // duurt wat langer nog even wachten...
 app.get("/", async (req, res) => {
@@ -65,6 +65,7 @@ app.get("/", async (req, res) => {
   });
 });
 
+// req = haal je info/data op & Res= stuur je het naar de html
 app.post("/formulier", async (req, res) => {
   const gebruikers = await test(client);
   const inputIntresse = req.body.Intresse;
@@ -79,23 +80,27 @@ app.post("/formulier", async (req, res) => {
     }
   });
 
-  // delete uit de database
-  // werkt nog niet
+  // req = haal je info/data op & Res= stuur je het naar de html
+  // verwijderd de gebruikers op naam (string) uit de database
   app.post("/delete", async (req, res) => {
-    await client.connect(client);
+    await client.connect();
 
     console.log(req.body);
     console.log(req.body.match);
 
     client
-      .db("userdb").collection("users").deleteOne({ naam: req.body.match }).then((LoreHarvet) => {
+      .db("userdb")
+      .collection("users")
+      .deleteOne({ naam: req.body.match })
+      .then((LoreHarvet) => {
         console.log(LoreHarvet);
       });
 
+    //redirect the user to a different URL by sending an HTTP response with status 302.
     res.redirect("/");
   });
 
-  //render same page with filter gebruikers
+  // ophalen matches uit de database en deze weergeven op de localhost:3000
   res.render("matches", {
     gebruikers: tempArray,
   });

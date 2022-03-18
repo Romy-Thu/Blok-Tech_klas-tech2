@@ -6,8 +6,8 @@ exports.test = async function (client) {
     const collection = database.collection("users");
 
     //   const doc = {
-    //     naam: "Ryshandro",
-    //     imgSrc: "static/images/persoon2.png",
+    //     naam: "Lori Harvey",
+    //     imgSrc: "static/images/persoon4.png",
     //     Leeftijd: "30",
     //     locatie: "Rotterdam",
     //     Intresse: "Drinks",

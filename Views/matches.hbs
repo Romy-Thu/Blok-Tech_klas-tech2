@@ -1,54 +1,55 @@
 <main id="matches">
   {{! Section 1 }}
-
+  <section>
   <form action="/formulier" method="post" id="filters">
     <h1 class="filter">Filter</h1>
-
+     <h2>Maak een keuze</h2>
     <div id="type">
       <h1>Intresse</h1>
       <div class="bump">
         <div class="box1">
-          <input type="checkbox" id="clothing" name="Intresse" value="Sport" />
-          <label for="clothing" class="check-box"></label>
+            <input type="checkbox" id="Sports" name="Intresse" value="Sports" required>     <!--De required zonder java komt niet te voorschijn-->
+          <label for="Sports" class="check-box"></label>
           <h4>Sports</h4>
         </div>
         <div class="box1">
-          <input type="checkbox" id="equipment" name="Intresse" value="Music" />
-          <label for="equipment" class="check-box"></label>
+          <input type="checkbox" id="Music" name="Intresse" value="Music">
+          <label for="Music" class="check-box"></label>
           <h4>Music</h4>
         </div>
         <div class="box1">
-          <input type="checkbox" id="trips" name="Intresse" value="Food" />
-          <label for="trips" class="check-box"></label>
+          <input type="checkbox" id="Food" name="Intresse" value="Food">
+          <label for="Food" class="check-box"></label>
           <h4>Food</h4>
         </div>
         <div class="box1">
-          <input type="checkbox" id="social" name="Intresse" value="Sport" />
-          <label for="social" class="check-box"></label>
+          <input type="checkbox" id="Drinks" name="Intresse" value="Drinks">
+          <label for="Drinks" class="check-box"></label>
           <h4>Drinks</h4>
         </div>
       </div>
     </div>
 
     <div class="slidecontainer">
-      <input type="range" min="1" max="60" class="slider" id="myRange" name="Leeftijd" value="30"/>
+      <input type="range" min="1" max="60" class="slider" id="myRange" name="Leeftijd" value="30">
       <p>Leeftijd <span id="demo"></span></p>
     </div>
 
     <button class="opslaan" type="submit">Opslaan</button>
     <!--END AGE RANGE-->
   </form>
-
-  {{! Section 3 }}
-  <section>
+  </section>
+  {{! Section 2 }}
+  <section class="scrolling-wrapper">
 
     {{! Loop met hbs om alle matches te weergeven }}
     {{#each gebruikers}}
-      <a href="#">
+      <a class="cards" href="#">
         <img class="gebruikers" src={{this.imgSrc}} alt="Foto van persoon" />
         <div>
           <h3>{{this.naam}}</h3>
           <p>{{this.locatie}}</p>
+          
           <form action="/delete" method="post">
             <input name="match" type="hidden" value="{{this.naam}}"/>
             <button type="submit">Delete</button>
@@ -57,4 +58,4 @@
       </a>
     {{/each}}
   </section>
-</main>ç
+</main>
