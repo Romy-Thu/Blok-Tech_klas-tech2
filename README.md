@@ -28,12 +28,21 @@ Als alles goed is verlopen zie je de matches van foodbuddy's en kun je filteren.
 Heb je bij stap 3 problemen gehad dan kan dat zijn omdat je geen node hebt geïnstalleerd.
 
 Open je terminal en installeer nvm met het volgende commando;
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+```
+
 Sluit je terminal en start deze vervolgens opnieuw op. Tik het volgende in je terminal:
+```
 nvm install stable
+```
+
 Nu heb je Node succesvol geïnstalleerd. Dit kun je met de volgende checken:
+```
 node -v # 
 npm -v # 
+```
+
 
 # Database
 Binnen dit project is er gebruik van een MongoDB database.
