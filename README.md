@@ -49,6 +49,18 @@ Nu heb je Node succesvol geïnstalleerd. Dit kun je met de volgende checken:
 node -v # 
 npm -v # 
 ```
+### 🚩Package.json
+Een pakket. json is een JSON-bestand dat zich in de hoofdmap van een Javascript/Node-project bevindt. Het bevat metadata die relevant zijn voor het project en wordt gebruikt voor het beheren van de projectafhankelijkheden, scripts, versie en nog veel meer.
+
+In mijn package.json vindje verschillende versies van pakketen.
+
+Wanneer je mijn repo cloned, krijg je ook alle pakketen mee die ik heb geinstalleerd
+bijv: 
+1. handlebars
+2. Mongodc(datavase)
+3. Eslint
+4. Nodemon
+5. etc....
 
 
 ### 💻Database
