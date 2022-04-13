@@ -61,6 +61,7 @@ De gehele documentatie over hoe ik op mijn concept ben gekomen en hoe ik mijn fe
 
 ### ❗Lincense
 Romy-Thu/blok-Tech_klas-tech2 is licensed under the GNU General Public License v3.0
+![Screenshot 2022-04-13 at 13 56 14](https://user-images.githubusercontent.com/94401597/163175082-8b61cfb8-6b6c-424a-9710-e5a580704c5c.png)
 
 ### 📧Contact <br>
 Naam - Romythu Zwijnenburg <br>
