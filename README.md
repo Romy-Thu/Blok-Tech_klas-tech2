@@ -50,11 +50,12 @@ node -v #
 npm -v # 
 ```
 ### 🚩Package.json
-Een pakket. json is een JSON-bestand dat zich in de hoofdmap van een Javascript/Node-project bevindt. Het bevat metadata die relevant zijn voor het project en wordt gebruikt voor het beheren van de projectafhankelijkheden, scripts, versie en nog veel meer.
+Een package. json is een JSON-bestand dat zich in de hoofdmap van een Javascript/Node-project bevindt. Het bevat metadata die relevant zijn voor het project en wordt gebruikt voor het beheren van de projectafhankelijkheden, scripts, versie en nog veel meer.
 
 In mijn package.json vindje verschillende versies van pakketen.
 
-Wanneer je mijn repo cloned, krijg je ook alle pakketen mee die ik heb geinstalleerd
+Wanneer je mijn repo cloned, krijg je ook alle pakketen mee die ik heb geinstalleerd.
+bekijk mijn [packages](https://github.com/Romy-Thu/Blok-Tech_klas-tech2/wiki/Packages)
 bijv: 
 1. handlebars
 2. Mongodc(datavase)
